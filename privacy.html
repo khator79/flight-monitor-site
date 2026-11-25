@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy</title>
+<style>
+  body { font: 16px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; max-width: 680px;
+         margin: 0 auto; padding: 32px 16px; color: #1f2328; background: #fff; }
+  h1 { font-size: 1.6rem; margin-bottom: .25rem; }
+  h2 { font-size: 1.1rem; margin-top: 1.6rem; }
+  .sub { color: #59636e; margin-top: 0; }
+  a { color: #0969da; }
+  @media (prefers-color-scheme: dark) {
+    body { color: #e6edf3; background: #0d1117; } .sub { color: #9198a1; } a { color: #4493f8; }
+  }
+</style>
+</head>
+<body>
+<h1>Privacy Policy</h1>
+<p class="sub">Flight Tracker Bot · Last updated 25 November 2026</p>
+
+<p>Flight Tracker Bot is a personal app used by a single person to track their own family's flights.
+It is not offered to the public and has no other users.</p>
+
+<h2>What the app accesses</h2>
+<p>The app connects to one dedicated Gmail account, created only to receive forwarded flight
+booking emails, using Google's read-only Gmail permission (<code>gmail.readonly</code>). It refuses
+to run against any other account. It cannot send, modify or delete email.</p>
+
+<h2>What it does with the data</h2>
+<ul>
+  <li>It reads booking emails (and attached PDF boarding passes) to find flight details: flight
+      numbers, dates, times, airports, booking references and traveller names.</li>
+  <li>To read those details, the email text is sent to an AI service (OpenAI) with contact details,
+      payment details and links removed first. The request is made with storage turned off.</li>
+  <li>On the day of travel, flight numbers and dates are looked up with a flight status service.
+      No personal details are sent to it.</li>
+  <li>Short updates are posted to a private family chat on Telegram, with booking references
+      partly hidden.</li>
+</ul>
+
+<h2>What it stores</h2>
+<p>Only the structured flight details listed above, in a private database. Email bodies,
+attachments and subjects are never stored. Logs never contain booking references, names or
+email content.</p>
+
+<h2>What it never does</h2>
+<ul>
+  <li>Sell, share or transfer Google user data to anyone, or use it for advertising.</li>
+  <li>Use Google user data for anything other than tracking the family's own flights.</li>
+  <li>Use Google user data to train AI models.</li>
+</ul>
+<p>Use of information received from Google APIs adheres to the
+<a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services
+User Data Policy</a>, including the Limited Use requirements.</p>
+
+<h2>Removing data</h2>
+<p>Access can be revoked at any time from the Google account's security settings
+(<a href="https://myaccount.google.com/permissions">Third-party apps with account access</a>).
+The stored flight details can be deleted by the app's owner at any time.</p>
+
+<p><a href="index.html">Back to the home page</a></p>
+</body>
+</html>
